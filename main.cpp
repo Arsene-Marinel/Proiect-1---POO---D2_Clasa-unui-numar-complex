@@ -21,8 +21,16 @@ using namespace std;
 
 int main()
 {
-    Complex a(2, 2), b(2, 0), c(-1, -2), *v;
+    Complex a, b(2, 0), c(-1, -2), *v;
+    citire(v);
+    cout << '\n';
+    cin >> a;
+    c = a * b;
+    Complex d(0, 2);
+    cout << c << d;
+    a += b;
+    cout << a;
     ecuatie(a, b, c, v);
-    cout<<v[0] << v[1];
+    cout << v[0] << v[1];
     return 0;
 }
