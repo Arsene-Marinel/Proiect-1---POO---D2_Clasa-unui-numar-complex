@@ -12,14 +12,14 @@ Complex::Complex(double a, double b)  ///Initializare
 
 Complex::Complex(const Complex &ob)  ///Copy Constructor
 {
-    re=ob.re;
-    im=ob.im;
+    re = ob.re;
+    im = ob.im;
 }
 
 Complex::~Complex()
 {
-    re=0;
-    im=0;
+    re = 0;
+    im = 0;
 }
 
 void Complex::set_Complex(double a, double b)
@@ -36,6 +36,18 @@ double Complex::get_real()
 double Complex::get_imaginar()
 {
     return im;
+}
+
+void citire(Complex *v)
+{
+    int n;
+    cin >> n;
+    v = new Complex[n];
+    for(int i = 0; i < n; i++)
+        cin >> v[i].re >> v[i].im;
+    for(int i = 0; i < n; i++)
+        cout << v[i];
+    delete[] v;
 }
 
 istream& operator>>(istream& in, Complex &z)
@@ -306,7 +318,6 @@ void ecuatie(Complex a, Complex b, Complex c, Complex *radacina)
     sqrt(delta);
     radacina[0] = (-b + delta) / (2 * a);
     radacina[1] = (-b - delta) / (2 * a);
-    delete[] radacina;
 }
 
 //

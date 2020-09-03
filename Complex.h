@@ -14,6 +14,8 @@ public:
     void set_Complex(double a, double b);
     double get_real();
     double get_imaginar();
+
+    friend void citire(Complex *v);
     friend istream& operator>>(istream&, Complex&);
     friend ostream& operator<<(ostream&, const Complex&);
 
